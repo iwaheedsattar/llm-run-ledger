@@ -1,0 +1,37 @@
+{
+  "name": "llm-run-ledger",
+  "version": "0.1.0",
+  "description": "Summarize JSONL LLM usage logs into cost, token, latency, and budget reports.",
+  "type": "module",
+  "types": "./dist/ledger.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/ledger.d.ts",
+      "import": "./dist/ledger.js"
+    }
+  },
+  "bin": {
+    "llm-run-ledger": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "smoke": "npm run build && node dist/cli.js examples/sample.jsonl --budget 0.01"
+  },
+  "keywords": [
+    "llm",
+    "ai",
+    "jsonl",
+    "tokens",
+    "cost",
+    "cli"
+  ],
+  "author": "Haider",
+  "license": "MIT",
+  "devDependencies": {}
+}
