@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "description": "Summarize JSONL LLM usage logs into cost, token, latency, and budget reports.",
   "type": "module",
+  "homepage": "https://github.com/iwaheedsattar/llm-run-ledger#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwaheedsattar/llm-run-ledger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iwaheedsattar/llm-run-ledger/issues"
+  },
   "types": "./dist/ledger.d.ts",
   "exports": {
     ".": {
@@ -33,5 +41,10 @@
   ],
   "author": "Haider",
   "license": "MIT",
-  "devDependencies": {}
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
 }
